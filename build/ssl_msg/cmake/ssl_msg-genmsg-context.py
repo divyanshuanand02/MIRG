@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg"
-services_str = "/home/divyanshu/mirg/src/ssl_msg/srv/path_plan.srv"
+messages_str = "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg;/home/divyanshu/mirg/src/ssl_msg/msg/path.msg"
+services_str = ""
 pkg_name = "ssl_msg"
 dependencies_str = "geometry_msgs;std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

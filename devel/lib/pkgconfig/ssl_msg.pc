@@ -3,6 +3,6 @@ prefix=/home/divyanshu/mirg/devel
 Name: ssl_msg
 Description: Description of ssl_msg
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/divyanshu/mirg/devel/include
 Libs: -L${prefix}/lib 
-Requires: roscpp rospy std_msgs message_runtime
+Requires: roscpp rospy geometry_msgs std_msgs message_runtime

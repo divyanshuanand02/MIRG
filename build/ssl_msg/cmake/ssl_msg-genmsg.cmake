@@ -1,10 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(FATAL_ERROR "Could not find messages which '/home/divyanshu/mirg/src/ssl_msg/msg/path.msg' depends on. Did you forget to specify generate_messages(DEPENDENCIES ...)?
-Cannot locate message [point_2d] in package [ssl_msg] with paths [['/home/divyanshu/mirg/src/ssl_msg/msg']]")
-message(FATAL_ERROR "Could not find messages which '/home/divyanshu/mirg/src/ssl_msg/srv/path_plan.srv' depends on. Did you forget to specify generate_messages(DEPENDENCIES ...)?
-Cannot locate message [point_2d] in package [ssl_msg] with paths [['/home/divyanshu/mirg/src/ssl_msg/msg']]")
-message(STATUS "ssl_msg: 1 messages, 1 services")
+message(STATUS "ssl_msg: 2 messages, 0 services")
 
 set(MSG_I_FLAGS "-Issl_msg:/home/divyanshu/mirg/src/ssl_msg/msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
@@ -21,12 +17,34 @@ add_custom_target(ssl_msg_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg" NAME_WE)
+add_custom_target(_ssl_msg_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ssl_msg" "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg" ""
+)
+
+get_filename_component(_filename "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg" NAME_WE)
+add_custom_target(_ssl_msg_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ssl_msg" "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(ssl_msg
+  "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ssl_msg
+)
+_generate_msg_cpp(ssl_msg
+  "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ssl_msg
+)
 
 ### Generating Services
 
@@ -42,6 +60,10 @@ add_custom_target(ssl_msg_generate_messages_cpp
 add_dependencies(ssl_msg_generate_messages ssl_msg_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg" NAME_WE)
+add_dependencies(ssl_msg_generate_messages_cpp _ssl_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg" NAME_WE)
+add_dependencies(ssl_msg_generate_messages_cpp _ssl_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(ssl_msg_gencpp)
@@ -52,6 +74,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ssl_msg_generate_messages_cpp)
 
 ### Section generating for lang: geneus
 ### Generating Messages
+_generate_msg_eus(ssl_msg
+  "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ssl_msg
+)
+_generate_msg_eus(ssl_msg
+  "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ssl_msg
+)
 
 ### Generating Services
 
@@ -67,6 +101,10 @@ add_custom_target(ssl_msg_generate_messages_eus
 add_dependencies(ssl_msg_generate_messages ssl_msg_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg" NAME_WE)
+add_dependencies(ssl_msg_generate_messages_eus _ssl_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg" NAME_WE)
+add_dependencies(ssl_msg_generate_messages_eus _ssl_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(ssl_msg_geneus)
@@ -77,6 +115,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ssl_msg_generate_messages_eus)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(ssl_msg
+  "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ssl_msg
+)
+_generate_msg_lisp(ssl_msg
+  "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ssl_msg
+)
 
 ### Generating Services
 
@@ -92,6 +142,10 @@ add_custom_target(ssl_msg_generate_messages_lisp
 add_dependencies(ssl_msg_generate_messages ssl_msg_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg" NAME_WE)
+add_dependencies(ssl_msg_generate_messages_lisp _ssl_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg" NAME_WE)
+add_dependencies(ssl_msg_generate_messages_lisp _ssl_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(ssl_msg_genlisp)
@@ -102,6 +156,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ssl_msg_generate_messages_lisp)
 
 ### Section generating for lang: gennodejs
 ### Generating Messages
+_generate_msg_nodejs(ssl_msg
+  "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ssl_msg
+)
+_generate_msg_nodejs(ssl_msg
+  "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ssl_msg
+)
 
 ### Generating Services
 
@@ -117,6 +183,10 @@ add_custom_target(ssl_msg_generate_messages_nodejs
 add_dependencies(ssl_msg_generate_messages ssl_msg_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg" NAME_WE)
+add_dependencies(ssl_msg_generate_messages_nodejs _ssl_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg" NAME_WE)
+add_dependencies(ssl_msg_generate_messages_nodejs _ssl_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(ssl_msg_gennodejs)
@@ -127,6 +197,18 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ssl_msg_generate_messages_nodejs)
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(ssl_msg
+  "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ssl_msg
+)
+_generate_msg_py(ssl_msg
+  "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ssl_msg
+)
 
 ### Generating Services
 
@@ -142,6 +224,10 @@ add_custom_target(ssl_msg_generate_messages_py
 add_dependencies(ssl_msg_generate_messages ssl_msg_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/divyanshu/mirg/src/ssl_msg/msg/point_2d.msg" NAME_WE)
+add_dependencies(ssl_msg_generate_messages_py _ssl_msg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/divyanshu/mirg/src/ssl_msg/msg/path.msg" NAME_WE)
+add_dependencies(ssl_msg_generate_messages_py _ssl_msg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(ssl_msg_genpy)

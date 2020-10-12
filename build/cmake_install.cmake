@@ -131,7 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/divyanshu/mirg/build/gtest/cmake_install.cmake")
-  include("/home/divyanshu/mirg/build/ssl_msg/cmake_install.cmake")
+  include("/home/divyanshu/mirg/build/ssl_msgs/cmake_install.cmake")
 
 endif()
 

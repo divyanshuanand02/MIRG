@@ -396,6 +396,12 @@ ssl_msg_BINARY_DIR:STATIC=/home/divyanshu/mirg/build/ssl_msg
 //Value Computed by CMake
 ssl_msg_SOURCE_DIR:STATIC=/home/divyanshu/mirg/src/ssl_msg
 
+//Value Computed by CMake
+ssl_msgs_BINARY_DIR:STATIC=/home/divyanshu/mirg/build/ssl_msgs
+
+//Value Computed by CMake
+ssl_msgs_SOURCE_DIR:STATIC=/home/divyanshu/mirg/src/ssl_msgs
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
 

@@ -1,2 +1,2 @@
-ssl_msg
+ssl_msgs
 -DCATKIN_DEVEL_PREFIX=/home/divyanshu/mirg/devel -DCMAKE_INSTALL_PREFIX=/home/divyanshu/mirg/install -G Unix Makefiles

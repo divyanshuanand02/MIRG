@@ -1,0 +1,2 @@
+set(ssl_msgs_MESSAGE_FILES "/home/divyanshu/mirg/src/ssl_msgs/msg/point_2d.msg;/home/divyanshu/mirg/src/ssl_msgs/msg/LinearMotionInstant.msg;/home/divyanshu/mirg/src/ssl_msgs/msg/MotionConstraints.msg;/home/divyanshu/mirg/src/ssl_msgs/msg/DynamicObstacle.msg;/home/divyanshu/mirg/src/ssl_msgs/msg/RobotInstant.msg;/home/divyanshu/mirg/src/ssl_msgs/msg/StaticObstacle.msg;/home/divyanshu/mirg/src/ssl_msgs/msg/path_plan.msg")
+set(ssl_msgs_SERVICE_FILES "")

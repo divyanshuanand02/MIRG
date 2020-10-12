@@ -1,0 +1,7 @@
+LinearMotionInstant start
+LinearMotionInstant goal
+MotionConstraints m_c
+time startTime
+DynamicObstacle[] dynamic_obstacle
+StaticObstacle[] static_obstacle
+point_2d biasWaypoints
